@@ -1,0 +1,19 @@
+body{
+    background-color: rgba(62, 62, 62, 1);
+}
+
+#main, #resultado{
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(120, 120, 120, 1);
+}
+
+input, button{
+    margin-top: 20px;
+}
+
+.hiden{
+    display: none;
+}
