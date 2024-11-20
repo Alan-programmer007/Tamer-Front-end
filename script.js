@@ -17,7 +17,16 @@ const bntVerificar = document.querySelector("#button-verificar")
 const bntVoltar = document.querySelector("#button-voltar")
 
 bntVerificar.addEventListener('click', ()=>{
-    const numero = Number(document.querySelector("input").value)
+
+    const inputValue = document.querySelector("input").value
+
+    if(inputValue == ""){
+        alert("Digite um valor!")
+    }else{
+        
+    const numero = Number(3)
+
+    console.log(numero)
 
     const resultado = document.querySelector("h2")
 
@@ -25,5 +34,8 @@ bntVerificar.addEventListener('click', ()=>{
         resultado.innerText = `O numero ${numero} é par`
     else
         resultado.innerText = `O numero ${numero} é ímpar`
+
+        document.querySelector("input").value = ""
+    }
     
 })
