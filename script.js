@@ -13,9 +13,6 @@ ul.appendChild(li)
 */
 
 const bntVerificar = document.querySelector("#button-verificar")
-
-const bntVoltar = document.querySelector("#button-voltar")
-
 bntVerificar.addEventListener('click', ()=>{
 
     const inputValue = document.querySelector("input").value
@@ -24,7 +21,7 @@ bntVerificar.addEventListener('click', ()=>{
         alert("Digite um valor!")
     }else{
         
-    const numero = Number(3)
+    const numero = Number(inputValue)
 
     console.log(numero)
 
@@ -36,6 +33,22 @@ bntVerificar.addEventListener('click', ()=>{
         resultado.innerText = `O numero ${numero} é ímpar`
 
         document.querySelector("input").value = ""
+
+        handleClick()
     }
-    
 })
+
+const bntVoltar = document.querySelector("#button-voltar")
+bntVoltar.addEventListener('click', ()=>{
+        handleClick()
+})
+
+function handleClick(){
+    const saida = document.querySelector("#resultado")
+
+    saida.classList.toggle("hiden")
+
+    const main = document.querySelector("#main")
+
+    main.classList.toggle("hiden")
+}
